@@ -7,7 +7,7 @@ const works = new Array(4).fill(0).map((_, i) => ({
   id: i,
   title: "A remade backend cut eSky's time to market by 75%",
   client: 'ESKY',
-  image: '/images/work-graphic.svg'
+  image: process.env.PUBLIC_URL + '/images/work-graphic.svg'
 }));
 
 export default function WorkGrid() {

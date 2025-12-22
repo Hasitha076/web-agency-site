@@ -53,7 +53,7 @@ export default function Philosophy(){
 
   return (
     <section ref={sectionRef} className="philosophy container" id="about">
-      <img src="/images/philosophy-img.png" alt="team at work" />
+      <img src={process.env.PUBLIC_URL + '/images/philosophy-img.png'} alt="team at work" />
 
       <div className="philosophy-content">
         <div className="kicker">ABOUT US</div>

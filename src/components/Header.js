@@ -25,7 +25,7 @@ export default function Header(){
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <a className="navbar-brand d-flex align-items-center" href="#"> 
-            <img src="/images/logo.svg" alt="logo" style={{width:32, height:32}} />
+            <img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="logo" style={{width:32, height:32}} />
             <strong className="ms-2">Experience Labs & Co.</strong>
           </a>
 
