@@ -14,7 +14,7 @@ export default function OurWorkPage() {
         <section className="page-hero" style={{
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           color: 'white',
-          padding: '120px 0 80px',
+          padding: '120px 0 120px',
           textAlign: 'center',
           transition: 'background 1000ms ease-in-out'
         }}>

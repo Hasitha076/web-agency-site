@@ -13,16 +13,16 @@ export default function AboutPage() {
         <section className="page-hero" style={{
           background: 'linear-gradient(135deg, #1f2c66ff 0%, #a97bd8ff 100%)',
           color: 'white',
-          padding: '120px 0 80px',
+          padding: '120px 0 120px',
           textAlign: 'center',
           transition: 'background 1000ms ease-in-out'
         }}>
           <div className="container">
             <h1 style={{fontSize: '3.5rem', fontWeight: '700', marginBottom: '1.5rem'}}>
-              About Experience Labs & Co.
+              Building the future, together.
             </h1>
             <p style={{fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', opacity: '0.95'}}>
-              Building exceptional digital products since 2015. We partner with visionary leaders to transform ideas into reality.
+              We're a team of passionate developers, designers, and innovators committed to transforming ideas into exceptional software solutions.
             </p>
           </div>
         </section>

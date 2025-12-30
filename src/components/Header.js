@@ -37,14 +37,14 @@ export default function Header(){
 
           <div className="collapse navbar-collapse" id="primaryNavbar" ref={navRef}>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className={`nav-item dropdown ${open === 'products' ? 'show' : ''}`}>
+              {/* <li className={`nav-item dropdown ${open === 'products' ? 'show' : ''}`}>
                 <a className="nav-link dropdown-toggle" href="#products" id="productsDropdown" role="button" aria-expanded={open === 'products'} onClick={(e)=>toggle('products', e)}>Products <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></a>
                 <ul className={`dropdown-menu ${open === 'products' ? 'show' : ''}`} aria-labelledby="productsDropdown" style={{display: open === 'products' ? 'block' : 'none'}}>
                   <li><a className="dropdown-item" href="#prod-a" onClick={()=>setOpen(null)}>Product A</a></li>
                   <li><a className="dropdown-item" href="#prod-b" onClick={()=>setOpen(null)}>Product B</a></li>
                   <li><a className="dropdown-item" href="#prod-c" onClick={()=>setOpen(null)}>Product C</a></li>
                 </ul>
-              </li>
+              </li> */}
 
               <li className={`nav-item dropdown ${open === 'services' ? 'show' : ''}`}>
                 <Link className={`nav-link dropdown-toggle ${location.pathname === '/services' ? 'active' : ''}`} to="/services" id="servicesDropdown" role="button" aria-expanded={open === 'services'} onClick={(e)=>{e.preventDefault(); toggle('services', e)}}>Services <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></Link>
@@ -57,10 +57,10 @@ export default function Header(){
               </li>
 
               <li className={`nav-item dropdown ${open === 'resources' ? 'show' : ''}`}>
-                <a className={`nav-link dropdown-toggle ${location.pathname === '/ourwork' ? 'active' : ''}`} href="#resources" id="resourcesDropdown" role="button" aria-expanded={open === 'resources'} onClick={(e)=>toggle('resources', e)}>Resources <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></a>
+                <a className={`nav-link dropdown-toggle ${location.pathname === '/ourwork' || location.pathname === '/case-studies' ? 'active' : ''}`} href="#resources" id="resourcesDropdown" role="button" aria-expanded={open === 'resources'} onClick={(e)=>toggle('resources', e)}>Resources <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></a>
                 <ul className={`dropdown-menu ${open === 'resources' ? 'show' : ''}`} aria-labelledby="resourcesDropdown" style={{display: open === 'resources' ? 'block' : 'none'}}>
                   <li><Link className={`dropdown-item ${location.pathname === '/ourwork' ? 'active' : ''}`} to="/ourwork" onClick={()=>setOpen(null)}>Our Work</Link></li>
-                  <li><a className="dropdown-item" href="#case-studies" onClick={()=>setOpen(null)}>Case studies</a></li>
+                  <li><Link className={`dropdown-item ${location.pathname === '/case-studies' ? 'active' : ''}`} to="/case-studies" onClick={()=>setOpen(null)}>Case studies</Link></li>
                 </ul>
               </li>
 
@@ -68,7 +68,7 @@ export default function Header(){
                 <a className={`nav-link dropdown-toggle ${location.pathname === '/about' ? 'active' : ''}`} href="#company" id="companyDropdown" role="button" aria-expanded={open === 'company'} onClick={(e)=>toggle('company', e)}>Company <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></a>
                 <ul className={`dropdown-menu ${open === 'company' ? 'show' : ''}`} aria-labelledby="companyDropdown" style={{display: open === 'company' ? 'block' : 'none'}}>
                   <li><Link className={`dropdown-item ${location.pathname === '/about' ? 'active' : ''}`} to="/about" onClick={()=>setOpen(null)}>About Us</Link></li>
-                  <li><a className="dropdown-item" href="#careers" onClick={()=>setOpen(null)}>Careers</a></li>
+                  {/* <li><a className="dropdown-item" href="#careers" onClick={()=>setOpen(null)}>Careers</a></li> */}
                 </ul>
               </li>
             </ul>
