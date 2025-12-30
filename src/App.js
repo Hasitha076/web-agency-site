@@ -1,40 +1,18 @@
 import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import WorkGrid from './components/WorkGrid';
-import Philosophy from './components/Philosophy';
-import FAQ from './components/FAQ';
-import CTA from './components/CTA';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ServicesPage from './pages/Services';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Hero />
-        <section className="section container">
-          
-          <Services />
-        </section>
-
-        <section className="section container">
-          <WorkGrid />
-        </section>
-
-        <section className="section container">
-          <Philosophy />
-        </section>
-
-        <section className="section container">
-          <FAQ />
-        </section>
-
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<ServicesPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
