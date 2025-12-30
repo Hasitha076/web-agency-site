@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,10 +25,10 @@ export default function Header(){
     <header className="site-header">
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a className="navbar-brand d-flex align-items-center" href="#"> 
+          <Link className="navbar-brand d-flex align-items-center" to="/"> 
             <img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="logo" style={{width:32, height:32}} />
             <strong className="ms-2">Experience Labs & Co.</strong>
-          </a>
+          </Link>
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
@@ -45,8 +46,9 @@ export default function Header(){
               </li>
 
               <li className={`nav-item dropdown ${open === 'services' ? 'show' : ''}`}>
-                <a className="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" aria-expanded={open === 'services'} onClick={(e)=>toggle('services', e)}>Services <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></a>
+                <Link className="nav-link dropdown-toggle" to="/services" id="servicesDropdown" role="button" aria-expanded={open === 'services'} onClick={(e)=>{e.preventDefault(); toggle('services', e)}}>Services <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></Link>
                 <ul className={`dropdown-menu ${open === 'services' ? 'show' : ''}`} aria-labelledby="servicesDropdown" style={{display: open === 'services' ? 'block' : 'none'}}>
+                  <li><Link className="dropdown-item" to="/services" onClick={()=>setOpen(null)}>All Services</Link></li>
                   <li><a className="dropdown-item" href="#svc-a" onClick={()=>setOpen(null)}>Software Development</a></li>
                   <li><a className="dropdown-item" href="#svc-b" onClick={()=>setOpen(null)}>Product Design</a></li>
                   <li><a className="dropdown-item" href="#svc-c" onClick={()=>setOpen(null)}>AI & ML</a></li>
