@@ -22,8 +22,7 @@ export default function ServicesPage() {
               Our Services
             </h1>
             <p style={{fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', opacity: '0.95'}}>
-              From AI-powered solutions to full-stack development, we deliver end-to-end services 
-              that transform your ideas into market-ready products.
+              Comprehensive technology solutions designed to accelerate your digital transformation and drive measurable business outcomes.
             </p>
           </div>
         </section>
