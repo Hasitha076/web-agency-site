@@ -1,73 +1,152 @@
 import React from 'react';
-import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
-import LocalActivityIcon from '@mui/icons-material/LocalActivity';
-import PaidIcon from '@mui/icons-material/Paid';
 
-const works = new Array(4).fill(0).map((_, i) => ({
-  id: i,
-  title: "A remade backend cut eSky's time to market by 75%",
-  client: 'ESKY',
-  image: process.env.PUBLIC_URL + '/images/work-graphic.svg'
-}));
+const works = [
+  {
+    id: 1,
+    category: 'Web Development',
+    categoryColor: '#667eea',
+    title: 'E-Commerce Platform Redesign',
+    description: 'A simple Machine Learning Web App built to showcase ML in the cloud.',
+    image: process.env.PUBLIC_URL + '/images/web-dev.jpg'
+  },
+  {
+    id: 2,
+    category: 'Mobile Development',
+    categoryColor: '#c084fc',
+    title: 'Mobile Banking Application',
+    description: 'A simple Machine Learning Web App built to showcase ML in the cloud.',
+    image: process.env.PUBLIC_URL + '/images/mobile-dev.jpg'
+  },
+  {
+    id: 3,
+    category: 'Artificial Intelligence',
+    categoryColor: '#fbbf24',
+    title: 'AI-Powered Analytics Dashboard',
+    description: "It's simple but powerful, a Web App that is truly scalable and ML ready.",
+    image: process.env.PUBLIC_URL + '/images/ai.jpg'
+  },
+  {
+    id: 4,
+    category: 'Product Design',
+    categoryColor: '#60a5fa',
+    title: 'Healthcare Management System',
+    description: 'A simple Machine Learning Web App built to showcase ML in the cloud.',
+    image: process.env.PUBLIC_URL + '/images/product-design.png'
+  },
+  {
+    id: 5,
+    category: 'Cloud Applications',
+    categoryColor: '#a78bfa',
+    title: 'Enterprise Resource Planning',
+    description: "It's simple but powerful, a Web App that is truly scalable and ML ready.",
+    image: process.env.PUBLIC_URL + '/images/cloud-applications.jpg'
+  },
+  {
+    id: 6,
+    category: 'Development Teams',
+    categoryColor: '#667eea',
+    title: 'Real-Time Collaboration Tool',
+    description: 'A simple Machine Learning Web App built to showcase ML in the cloud.',
+    image: process.env.PUBLIC_URL + '/images/development-teams.jpg'
+  }
+];
 
 export default function WorkGrid() {
   return (
     <section className="work-section container" id="work">
-      <div className="work-header">
-        <h2 className="section-title">Our work</h2>
-        <a className="case-btn" href="#cases">Go to case studies</a>
+      <div className="work-header" style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: '60px'
+      }}>
+        <h2 style={{fontSize: '3rem', fontWeight: '600', margin: 0}}>Our work</h2>
+        <a 
+          className="case-btn" 
+          href="#cases"
+          style={{
+            background: '#000',
+            color: '#fff',
+            padding: '12px 24px',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            fontSize: '1rem',
+            fontWeight: '500',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          Go to case studies
+        </a>
       </div>
 
-      <div className="work-grid">
-        {works.map(w => (
-          <article className="work-column" key={w.id}>
-            <div className="work-visual">
-              <div className="work-plate" aria-hidden>
-                <div className="work-card-inner">
-                  <div className="work-side-icons" aria-hidden>
-                    <div className='icon-box'><AirplanemodeActiveIcon /></div>
-                    <div className='icon-box'><AirplanemodeActiveIcon /></div>
-                    <div className='icon-box'><LocalActivityIcon /></div>
-                    <div className='icon-box'><PaidIcon /></div>
-                  </div>
-
-                  <div className="work-main">
-                    <div className="work-top-card">
-                      <div className="thumb">
-                        <img src={w.image} alt="demo" />
-                      </div>
-                      <div className="meta">
-                        <div className="meta-sub">Deluxe Room</div>
-                        <div className="meta-title">Sao Pinto, Hostel</div>
-                        <div className="meta-row">Bali, Indonesia &nbsp; • &nbsp; <strong>5.0</strong> (234 Reviews)</div>
-                      </div>
-                    </div>
-
-                    <div className="work-bottom-card">
-                      <div className="card-row">
-                        <div className="card-icon">VISA</div>
-                        <div className="card-text">Visa ---- 2820<br /><small>Exp 12-02-30</small></div>
-                        <div className="card-radio">◯</div>
-                      </div>
-                      <div className="card-row">
-                        <div className="card-icon">MC</div>
-                        <div className="card-text">Master Card ---- 5570<br /><small>Exp 12-02-27</small></div>
-                        <div className="card-radio">◯</div>
-                      </div>
-                      <button className="add-card">Add new card</button>
-                    </div>
-                  </div>
-                </div>
+      <div className="row">
+        {works.map(work => (
+          <div className="col-lg-4 col-md-6" key={work.id} style={{marginBottom: '30px'}}>
+            <div style={{
+              background: '#fff',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              cursor: 'pointer',
+              height: '100%',
+              border: '1px solid #e5e5e5'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              {/* Image Area */}
+              <div style={{
+                height: '200px',
+                backgroundImage: `url(${work.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative'
+              }}>
+                <span style={{
+                  position: 'absolute',
+                  bottom: '15px',
+                  left: '15px',
+                  background: work.categoryColor,
+                  color: '#fff',
+                  padding: '6px 14px',
+                  borderRadius: '20px',
+                  fontSize: '0.85rem',
+                  fontWeight: '500'
+                }}>
+                  {work.category}
+                </span>
+              </div>
+              
+              {/* Content Area */}
+              <div style={{padding: '25px'}}>
+                <h3 style={{
+                  fontSize: '1.3rem',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#1a1a1a',
+                  lineHeight: '1.4'
+                }}>
+                  {work.title}
+                </h3>
+                <p style={{
+                  fontSize: '0.95rem',
+                  color: '#666',
+                  lineHeight: '1.6',
+                  margin: 0
+                }}>
+                  {work.description}
+                </p>
               </div>
             </div>
-
-            <div className="work-text">
-              <div className="work-lead">→ <span className="work-title">{w.title}</span></div>
-              <div className="work-client">{w.client}</div>
-            </div>
-          </article>
+          </div>
         ))}
       </div>
     </section>
   );
 }
+

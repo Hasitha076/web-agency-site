@@ -63,6 +63,10 @@
   vertical-align: middle;
   padding: 6px 15px !important;
 }
+.navbar-nav .nav-link.active {
+  color: #667eea;
+  font-weight: 600;
+}
 .cta-btn { background:#111; color:#fff !important; padding:12px 20px; border-radius:4px; font-size:15px; text-decoration:none; border: 1px solid #111; transition: 800ms ease-in-out; }
 .cta-btn:hover { background:transparent; text-decoration:none; color:#000 !important }
 /* Bootstrap dropdown panel tweaks */
@@ -78,6 +82,11 @@
 }
 
 .navbar .dropdown-item:hover { background:#f6f6f8; color:#111 }
+.navbar .dropdown-item.active {
+    background: #667eea;
+    color: #fff;
+    font-weight: 600;
+}
 
 @media (max-width:900px){
   .navbar-nav .nav-link { padding:8px 6px }
