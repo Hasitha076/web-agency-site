@@ -74,7 +74,7 @@ export default function Header(){
             </ul>
 
             <div className="d-flex align-items-center ms-lg-4">
-              <a className="cta-btn nav-link" href="#contact">Talk to us</a>
+              <Link className={`cta-btn nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact">Talk to us</Link>
             </div>
           </div>
         </div>

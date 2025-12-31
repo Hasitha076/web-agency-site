@@ -1,20 +1,24 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 export default function Footer(){
+  const location = useLocation();
+
   return (
     <footer className="site-footer" aria-label="Footer">
       <div className="container footer-top">
         <div className="footer-col">
           <div className="footer-kicker">Company</div>
           <ul className="footer-list">
-            <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Home</a></li>
-            <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> About</a></li>
-            <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Services</a></li>
-            <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Case Studies</a></li>
-            <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Careers</a></li>
+            <li><Link className={location.pathname === '/' ? 'active' : ''} to="/"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Home</Link></li>
+            <li><Link className={location.pathname === '/about' ? 'active' : ''} to="/about"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> About Us</Link></li>
+            <li><Link className={location.pathname === '/services' ? 'active' : ''} to="/services"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Services</Link></li>
+            <li><Link className={location.pathname === '/case-studies' ? 'active' : ''} to="/case-studies"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Case Studies</Link></li>
+            <li><Link className={location.pathname === '/ourwork' ? 'active' : ''} to="/ourwork"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Our Work</Link></li>
+            <li><Link className={location.pathname === '/contact' ? 'active' : ''} to="/contact"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Contact Us</Link></li>
           </ul>
         </div>
 
