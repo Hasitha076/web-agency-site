@@ -1,9 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
 
 export default function AboutPage() {
+  const [stats, setStats] = useState({
+    projects: 0,
+    team: 0,
+    countries: 0,
+    satisfaction: 0
+  });
+
+  useEffect(() => {
+    const duration = 3000; // 3.5 seconds
+    const steps = 60; // 60 frames
+    const interval = duration / steps;
+
+    const targets = {
+      projects: 500,
+      team: 50,
+      countries: 15,
+      satisfaction: 98
+    };
+
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+
+      setStats({
+        projects: Math.floor(targets.projects * progress),
+        team: Math.floor(targets.team * progress),
+        countries: Math.floor(targets.countries * progress),
+        satisfaction: Math.floor(targets.satisfaction * progress)
+      });
+
+      if (currentStep >= steps) {
+        clearInterval(timer);
+        setStats(targets); // Ensure final values are exact
+      }
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="about-page">
       <Header />
@@ -125,28 +166,28 @@ export default function AboutPage() {
             <div className="row">
               <div className="col-lg-3 col-md-6" style={{textAlign: 'center'}}>
                 <h3 style={{fontSize: '4rem', fontWeight: '300', color: '#fff', marginBottom: '10px'}}>
-                  500+
+                  {stats.projects}+
                 </h3>
                 <p style={{color: '#b0b0b0', fontSize: '1.1rem'}}>Projects Delivered</p>
               </div>
               
               <div className="col-lg-3 col-md-6" style={{textAlign: 'center'}}>
                 <h3 style={{fontSize: '4rem', fontWeight: '300', color: '#fff', marginBottom: '10px'}}>
-                  50+
+                  {stats.team}+
                 </h3>
                 <p style={{color: '#b0b0b0', fontSize: '1.1rem'}}>Team Members</p>
               </div>
               
               <div className="col-lg-3 col-md-6" style={{textAlign: 'center'}}>
                 <h3 style={{fontSize: '4rem', fontWeight: '300', color: '#fff', marginBottom: '10px'}}>
-                  15+
+                  {stats.countries}+
                 </h3>
                 <p style={{color: '#b0b0b0', fontSize: '1.1rem'}}>Countries Served</p>
               </div>
               
               <div className="col-lg-3 col-md-6" style={{textAlign: 'center'}}>
                 <h3 style={{fontSize: '4rem', fontWeight: '300', color: '#fff', marginBottom: '10px'}}>
-                  98%
+                  {stats.satisfaction}%
                 </h3>
                 <p style={{color: '#b0b0b0', fontSize: '1.1rem'}}>Client Satisfaction</p>
               </div>
