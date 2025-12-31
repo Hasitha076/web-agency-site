@@ -14,10 +14,11 @@ export default function Footer(){
           <div className="footer-kicker">Company</div>
           <ul className="footer-list">
             <li><Link className={location.pathname === '/' ? 'active' : ''} to="/"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Home</Link></li>
-            <li><Link className={location.pathname === '/about' ? 'active' : ''} to="/about"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> About Us</Link></li>
             <li><Link className={location.pathname === '/services' ? 'active' : ''} to="/services"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Services</Link></li>
-            <li><Link className={location.pathname === '/case-studies' ? 'active' : ''} to="/case-studies"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Case Studies</Link></li>
             <li><Link className={location.pathname === '/ourwork' ? 'active' : ''} to="/ourwork"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Our Work</Link></li>
+            <li><Link className={location.pathname === '/case-studies' ? 'active' : ''} to="/case-studies"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Case Studies</Link></li>
+            <li><Link className={location.pathname === '/portfolio' ? 'active' : ''} to="/portfolio"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Portfolio</Link></li>
+            <li><Link className={location.pathname === '/about' ? 'active' : ''} to="/about"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> About</Link></li>
             <li><Link className={location.pathname === '/contact' ? 'active' : ''} to="/contact"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Contact Us</Link></li>
           </ul>
         </div>
