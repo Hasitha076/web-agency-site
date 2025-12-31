@@ -139,7 +139,7 @@ export default function CaseStudiesPage() {
       {/* Case Studies Grid */}
       <section style={{padding: '80px 20px'}}>
         <div className="container">
-          <div className="row">
+          <div className="row" style={{alignItems: 'flex-start'}}>
             {caseStudies.map((study) => (
               <div key={study.id} className="col-lg-6 col-md-12" style={{marginBottom: '40px'}}>
                 <div style={{
@@ -147,8 +147,7 @@ export default function CaseStudiesPage() {
                   overflow: 'hidden',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
                   transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  height: '100%'
+                  cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.2)';
