@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const works = [
   {
@@ -61,9 +62,9 @@ export default function WorkGrid() {
         marginBottom: '60px'
       }}>
         <h2 style={{fontSize: '3rem', fontWeight: '600', margin: 0}}>Our work</h2>
-        <a 
+        <Link 
           className="case-btn" 
-          href="#cases"
+          to="/case-studies"
           style={{
             background: '#000',
             color: '#fff',
@@ -76,7 +77,7 @@ export default function WorkGrid() {
           }}
         >
           Go to case studies
-        </a>
+        </Link>
       </div>
 
       <div className="row">

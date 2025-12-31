@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Hero(){
@@ -35,7 +36,7 @@ export default function Hero(){
             <div className="hero-content">
               <h1 className="hero-title">Reduce risk. Increase delivery speed. Build better <span className="hero-dynamic"><span className={"word " + (visible ? '' : 'hidden')}>{words[current]}.</span></span></h1>
               <p className="hero-sub">From architecture to delivery, we build systems that reduce risk and accelerate your roadmap.</p>
-              <a href="#contact" className="hero-cta">Send us a message <ArrowForwardIcon style={{verticalAlign:'middle', marginLeft:8}} fontSize="small" /></a>
+              <Link to="/contact" className="hero-cta">Send us a message <ArrowForwardIcon style={{verticalAlign:'middle', marginLeft:8}} fontSize="small" /></Link>
             </div>
           </div>
         </div>
