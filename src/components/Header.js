@@ -46,7 +46,7 @@ export default function Header(){
                 </ul>
               </li> */}
 
-              <li className={`nav-item dropdown ${open === 'services' ? 'show' : ''}`}>
+              {/* <li className={`nav-item dropdown ${open === 'services' ? 'show' : ''}`}>
                 <Link className={`nav-link dropdown-toggle ${location.pathname === '/services' ? 'active' : ''}`} to="/services" id="servicesDropdown" role="button" aria-expanded={open === 'services'} onClick={(e)=>{e.preventDefault(); toggle('services', e)}}>Services <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></Link>
                 <ul className={`dropdown-menu ${open === 'services' ? 'show' : ''}`} aria-labelledby="servicesDropdown" style={{display: open === 'services' ? 'block' : 'none'}}>
                   <li><Link className={`dropdown-item ${location.pathname === '/services' ? 'active' : ''}`} to="/services" onClick={()=>setOpen(null)}>All Services</Link></li>
@@ -54,6 +54,10 @@ export default function Header(){
                   <li><a className="dropdown-item" href="#svc-b" onClick={()=>setOpen(null)}>Product Design</a></li>
                   <li><a className="dropdown-item" href="#svc-c" onClick={()=>setOpen(null)}>AI & ML</a></li>
                 </ul>
+              </li> */}
+
+               <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} to="/services">Services</Link>
               </li>
 
               <li className={`nav-item dropdown ${open === 'resources' ? 'show' : ''}`}>
@@ -64,12 +68,19 @@ export default function Header(){
                 </ul>
               </li>
 
-              <li className={`nav-item dropdown ${open === 'company' ? 'show' : ''}`}>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/portfolio' ? 'active' : ''}`} to="/portfolio">Portfolio</Link>
+              </li>
+
+              {/* <li className={`nav-item dropdown ${open === 'company' ? 'show' : ''}`}>
                 <a className={`nav-link dropdown-toggle ${location.pathname === '/about' ? 'active' : ''}`} href="#company" id="companyDropdown" role="button" aria-expanded={open === 'company'} onClick={(e)=>toggle('company', e)}>Company <FontAwesomeIcon icon={faAngleDown} className="ms-1" /></a>
                 <ul className={`dropdown-menu ${open === 'company' ? 'show' : ''}`} aria-labelledby="companyDropdown" style={{display: open === 'company' ? 'block' : 'none'}}>
                   <li><Link className={`dropdown-item ${location.pathname === '/about' ? 'active' : ''}`} to="/about" onClick={()=>setOpen(null)}>About Us</Link></li>
-                  {/* <li><a className="dropdown-item" href="#careers" onClick={()=>setOpen(null)}>Careers</a></li> */}
                 </ul>
+              </li> */}
+
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">About</Link>
               </li>
             </ul>
 
