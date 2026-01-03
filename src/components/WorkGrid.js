@@ -64,7 +64,7 @@ export default function WorkGrid() {
         <h2 style={{fontSize: '3rem', fontWeight: '600', margin: 0}}>Our work</h2>
         <Link 
           className="case-btn" 
-          to="/case-studies"
+          to="/portfolio"
           style={{
             background: '#000',
             color: '#fff',
@@ -95,14 +95,31 @@ export default function WorkGrid() {
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-5px)';
               e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+              const contentDiv = e.currentTarget.querySelector('[data-work-content]');
+              if (contentDiv) {
+                contentDiv.style.backgroundColor = '#000';
+                contentDiv.style.transition = 'all 0.3s ease';
+                const heading = contentDiv.querySelector('h3');
+                if (heading) heading.style.color = '#fff';
+                const paragraph = contentDiv.querySelector('p');
+                if (paragraph) paragraph.style.color = '#fff';
+              }
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
               e.currentTarget.style.boxShadow = 'none';
+              const contentDiv = e.currentTarget.querySelector('[data-work-content]');
+              if (contentDiv) {
+                contentDiv.style.backgroundColor = '#fff';
+                const heading = contentDiv.querySelector('h3');
+                if (heading) heading.style.color = '#1a1a1a';
+                const paragraph = contentDiv.querySelector('p');
+                if (paragraph) paragraph.style.color = '#666';
+              }
             }}>
               {/* Image Area */}
               <div style={{
-                height: '200px',
+                height: '300px',
                 backgroundImage: `url(${work.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -124,7 +141,7 @@ export default function WorkGrid() {
               </div>
               
               {/* Content Area */}
-              <div style={{padding: '25px'}}>
+              <div data-work-content style={{padding: '25px'}}>
                 <h3 style={{
                   fontSize: '1.3rem',
                   fontWeight: '600',

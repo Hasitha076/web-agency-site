@@ -2,12 +2,12 @@ import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const items = [
-  {title:'Software Development', body:'We build resilient backend systems and modern web apps.', color:'#F7E7CF'},
-  {title:'Artificial Intelligence', body:'AI services to accelerate product discovery and automation.', color:'#F3E7FF'},
-  {title:'Product Design', body:'User-centered design for web and mobile products.', color:'#DEF2FF'},
-  {title:'Artificial Intelligence', body:'Custom ML models and data pipelines.', color:'#F3E7FF'},
-  {title:'Software Development', body:'Platform engineering and developer tooling.', color:'#F7E7CF'},
-  {title:'Development Teams', body:'Staffing and embedded teams to scale delivery.', color:'#EFE7FF'},
+  {title:'Software Development', body:'We design and develop reliable, high-performance systems tailored to your workflows, reducing technical debt while accelerating delivery.', color:'#F7E7CF'},
+  {title:'Artificial Intelligence', body:'We build practical AI and ML solutions that automate processes, surface insights, and integrate seamlessly into your existing products.', color:'#F3E7FF'},
+  {title:'Web, Mobile, Cloud Applications', body:'From web platforms to mobile apps and cloud-native systems, we deliver secure, scalable applications ready for real-world growth.', color:'#DEF2FF'},
+  {title:'Product (UX) Design', body:'We translate complex requirements into intuitive, usable products, combining research, UX strategy, and polished UI execution.', color:'#F3E7FF'},
+  {title:'Cloud Engineering', body:'We architect, migrate, and optimize cloud environments to improve reliability, performance, and long-term operational efficiency.', color:'#F7E7CF'},
+  {title:'Development Teams', body:'We provide skilled, cross-functional engineers who integrate seamlessly with your teams to deliver consistently and at speed.', color:'#EFE7FF'},
 ]
 
 export default function Services(){

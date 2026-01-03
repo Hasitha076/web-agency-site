@@ -24,9 +24,11 @@ export default function Footer(){
         <div className="footer-col">
           <div className="footer-kicker">Services</div>
           <ul className="footer-list">
+            <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Software Development</a></li>
             <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Artificial Intelligence</a></li>
             <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Web, Mobile, Cloud Applications</a></li>
             <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Product (UX) Design</a></li>
+            <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Cloud Engineering</a></li>
             <li><a href="#"><ArrowRightIcon className="footer-link-icon" fontSize="small" /> Dedicated Development Teams</a></li>
           </ul>
         </div>
@@ -35,7 +37,6 @@ export default function Footer(){
           <div className="footer-kicker">Follow</div>
           <div className="social-row">
             <a className="social" href="#" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-            <a className="social" href="#" aria-label="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
             <a className="social" href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
             <a className="social" href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
           </div>
