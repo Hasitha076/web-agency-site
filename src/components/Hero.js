@@ -34,8 +34,8 @@ export default function Hero(){
         <div className="row align-items-center">
           <div className="col-12">
             <div className="hero-content">
-              <h1 className="hero-title">Reduce risk. Increase delivery speed. Build better <span className="hero-dynamic"><span className={"word " + (visible ? '' : 'hidden')}>{words[current]}.</span></span></h1>
-              <p className="hero-sub">From architecture to delivery, we build systems that reduce risk and accelerate your roadmap.</p>
+              <h1 className="hero-title">Reduce risk. Increase delivery <br /> speed. Build better <span className="hero-dynamic"><span className={"word " + (visible ? '' : 'hidden')}>{words[current]}.</span></span></h1>
+              <p className="hero-sub">From architecture to delivery, we build systems that reduce risk <br /> and accelerate your roadmap.</p>
               <Link to="/contact" className="hero-cta">Send us a message <ArrowForwardIcon style={{verticalAlign:'middle', marginLeft:8}} fontSize="small" /></Link>
             </div>
           </div>

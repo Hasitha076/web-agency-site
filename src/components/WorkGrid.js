@@ -80,9 +80,9 @@ export default function WorkGrid() {
         </Link>
       </div>
 
-      <div className="row">
+      <div className="row" style={{ justifyContent: 'space-between' }}>
         {works.map(work => (
-          <div className="col-lg-4 col-md-6" key={work.id} style={{marginBottom: '30px'}}>
+          <div className="col-lg-4 col-md-6 cards" key={work.id} style={{marginBottom: '30px'}}>
             <div style={{
               background: '#fff',
               borderRadius: '12px',
@@ -143,8 +143,9 @@ export default function WorkGrid() {
               {/* Content Area */}
               <div data-work-content style={{padding: '25px'}}>
                 <h3 style={{
-                  fontSize: '1.3rem',
-                  fontWeight: '600',
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: '28px',
+                  fontWeight: '400',
                   marginBottom: '12px',
                   color: '#1a1a1a',
                   lineHeight: '1.4'

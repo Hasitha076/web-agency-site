@@ -198,7 +198,7 @@
     width: 359px;
     height: 359px;
     right: 1%;
-    top: 32%;
+    top: 37%;
     background: transparent;
     border: 2px solid rgb(190 219 255);
   transform: rotate(25deg);
@@ -237,7 +237,7 @@
 
 /* Hero content layout and typography adjustments to match reference */
 .hero .container { position:relative; z-index:2; padding:64px 20px; }
-.hero-content { max-width:1000px; }
+.hero-content { max-width:1366px; }
 .hero-title { font-size: clamp(36px, 6.8vw, 88px); font-weight:300; line-height:1.03; color:#222; margin:0 0 18px; }
 .hero-sub { font-size: clamp(15px, 1.4vw, 18px); color:#222; opacity:0.9; margin:0 0 28px; }
 .hero-cta { display:inline-flex; align-items:center; gap:10px; background:#000; color:#fff; padding:12px 20px; border-radius:2px; text-decoration:none; font-weight:500; box-shadow: none; }
@@ -397,6 +397,10 @@
     gap: 28px;
     align-items: flex-start;
     flex-direction: column;
+}
+.work-section .cards {
+    flex: 0 0 auto;
+    width: 31.333333%;
 }
 
 .work-visual { flex:0 0 420px; display:flex; align-items:center; justify-content:center }

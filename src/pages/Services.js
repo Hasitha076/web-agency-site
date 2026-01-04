@@ -35,7 +35,7 @@ export default function ServicesPage() {
         {/* Why Partner With Us Section */}
         <section className="why-partner section" style={{background: '#f5f5f5', padding: '100px 0', margin: '80px auto', borderRadius: '0'}}>
           <div className="container">
-            <h2 style={{fontSize: '3rem', fontWeight: '600', marginBottom: '80px', textAlign: 'left'}}>
+            <h2 style={{fontFamily: 'Inter, sans-serif', fontSize: '60px', fontWeight: '400', marginBottom: '80px', textAlign: 'left'}}>
               Why partner with us
             </h2>
             
@@ -72,12 +72,12 @@ export default function ServicesPage() {
 
         {/* Our Approach Section */}
         <section className="approach-section section container" style={{padding: '30px 0'}}>
-          <h2 style={{fontSize: '3rem', fontWeight: '600', marginBottom: '80px', textAlign: 'left'}}>
+          <h2 style={{fontFamily: 'Inter, sans-serif', fontSize: '60px', fontWeight: '400', marginBottom: '80px', textAlign: 'left'}}>
             Our approach
           </h2>
           
           <div style={{maxWidth: '1100px'}}>
-            <div style={{display: 'flex', gap: '30px', marginBottom: '60px', paddingBottom: '40px', borderBottom: '1px solid #e0e0e0'}}>
+            <div style={{display: 'flex', gap: '30px', marginBottom: '60px', paddingBottom: '25px', borderBottom: '1px solid #e0e0e0'}}>
               <div style={{fontSize: '3rem', fontWeight: '300', color: '#667eea', minWidth: '80px'}}>01</div>
               <div>
                 <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '15px'}}>
@@ -89,7 +89,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div style={{display: 'flex', gap: '30px', marginBottom: '60px', paddingBottom: '40px', borderBottom: '1px solid #e0e0e0'}}>
+            <div style={{display: 'flex', gap: '30px', marginBottom: '60px', paddingBottom: '25px', borderBottom: '1px solid #e0e0e0'}}>
               <div style={{fontSize: '3rem', fontWeight: '300', color: '#667eea', minWidth: '80px'}}>02</div>
               <div>
                 <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '15px'}}>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div style={{display: 'flex', gap: '30px', marginBottom: '60px', paddingBottom: '40px', borderBottom: '1px solid #e0e0e0'}}>
+            <div style={{display: 'flex', gap: '30px', marginBottom: '60px', paddingBottom: '25px', borderBottom: '1px solid #e0e0e0'}}>
               <div style={{fontSize: '3rem', fontWeight: '300', color: '#667eea', minWidth: '80px'}}>03</div>
               <div>
                 <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '15px'}}>

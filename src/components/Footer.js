@@ -53,7 +53,7 @@ export default function Footer(){
       <div className="container footer-bottom">
         <div className="footer-brand">
           <div className="brand-mark" aria-hidden>
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="14" height="14" stroke="#3b82f6" strokeWidth="1.6" fill="none" transform="rotate(45 10 13)"/></svg>
+            <img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="logo" style={{width:32, height:32}} />
           </div>
           <div className="brand-name">EXPERIENCE LABS &amp; CO.</div>
         </div>
